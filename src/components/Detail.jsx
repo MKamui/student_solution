@@ -13,14 +13,14 @@ const Detail = () => {
   let { id } = useParams()
   const [s_id] = useState(id);
   const [code] = useState(118044);
-  const [first_name, setFirst_Name] = useState();
-  const [last_name, setLast_Name] = useState();
-  const [lv_id, setLv_id] = useState();
-  const [group, setGroup] = useState();
-  const [email, setEmail] = useState();
-  const [phone_number, setPhone_number] = useState();
-  const [geolocation, setGeolocation] = useState();
-  const [status, setStatus] = useState();
+  const [first_name, setFirst_Name] = useState(student.first_name);
+  const [last_name, setLast_Name] = useState(student.last_name);
+  const [lv_id, setLv_id] = useState(student.lv_id);
+  const [group, setGroup] = useState(student.group);
+  const [email, setEmail] = useState(student.email);
+  const [phone_number, setPhone_number] = useState(student.phone_number);
+  const [geolocation, setGeolocation] = useState(student.geolocation);
+  const [status, setStatus] = useState(student.status);
   
   useEffect(() => {
     dispatch(getStudentByID(id))
